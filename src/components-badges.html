@@ -1,0 +1,58 @@
+@@include("partials/_header.html", {"title": "Badges - Components - UI"})
+
+<body>
+
+    @@include("partials/_navigation.html")
+
+    <!-- Workspace -->
+    <main class="workspace">
+
+        <!-- Breadcrumb -->
+        <section class="breadcrumb">
+            <h1>Badges</h1>
+            <ul>
+                <li><a href="#">UI</a></li>
+                <li class="divider la la-arrow-right"></li>
+                <li><a href="#">Components</a></li>
+                <li class="divider la la-arrow-right"></li>
+                <li>Badges</li>
+            </ul>
+        </section>
+
+        <!-- Default -->
+        <div class="card p-5">
+            <h3>Default</h3>
+            <div class="flex flex-wrap gap-5 mt-5">
+                <div class="badge badge_primary uppercase">Primary</div>
+                <div class="badge badge_secondary uppercase">Secondary</div>
+                <div class="badge badge_success uppercase">Success</div>
+                <div class="badge badge_danger uppercase">Danger</div>
+                <div class="badge badge_warning uppercase">Warning</div>
+                <div class="badge badge_info uppercase">Info</div>
+            </div>
+        </div>
+
+        <!-- Outlined -->
+        <div class="card mt-5 p-5">
+            <h3>Outlined</h3>
+            <div class="flex flex-wrap gap-5 mt-5">
+                <div class="badge badge_outlined badge_primary uppercase">Primary</div>
+                <div class="badge badge_outlined badge_secondary uppercase">Secondary</div>
+                <div class="badge badge_outlined badge_success uppercase">Success</div>
+                <div class="badge badge_outlined badge_danger uppercase">Danger</div>
+                <div class="badge badge_outlined badge_warning uppercase">Warning</div>
+                <div class="badge badge_outlined badge_info uppercase">Info</div>
+            </div>
+        </div>
+
+        @@include("partials/_footer.html")
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

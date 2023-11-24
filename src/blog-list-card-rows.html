@@ -1,0 +1,233 @@
+@@include("partials/_header.html", {"title": "List - Card Rows - Blog - Pages"})
+
+<body>
+
+    @@include("partials/_navigation.html")
+
+    <!-- Workspace -->
+    <main class="workspace">
+
+        <!-- Breadcrumb -->
+        <section class="breadcrumb lg:flex items-start">
+            <div>
+                <h1>Blog</h1>
+                <ul>
+                    <li><a href="#">Pages</a></li>
+                    <li class="divider la la-arrow-right"></li>
+                    <li><a href="#">Blog</a></li>
+                    <li class="divider la la-arrow-right"></li>
+                    <li>List - Card Rows</li>
+                </ul>
+            </div>
+
+            <div class="flex flex-wrap gap-2 items-center ltr:ml-auto rtl:mr-auto mt-5 lg:mt-0">
+
+                <!-- Layout -->
+                <div class="flex gap-x-2">
+                    <a href="blog-list.html" class="btn btn-icon btn-icon_large btn_outlined btn_secondary">
+                        <span class="la la-bars"></span>
+                    </a>
+                    <a href="#" class="btn btn-icon btn-icon_large btn_outlined btn_primary">
+                        <span class="la la-list"></span>
+                    </a>
+                    <a href="blog-list-card-columns.html"
+                        class="btn btn-icon btn-icon_large btn_outlined btn_secondary">
+                        <span class="la la-th-large"></span>
+                    </a>
+                </div>
+
+                <!-- Search -->
+                <form class="flex flex-auto items-center" action="#">
+                    <label class="form-control-addon-within rounded-full">
+                        <input type="text" class="form-control border-none" placeholder="Search">
+                        <button type="button"
+                            class="btn btn-link text-gray-300 dark:text-gray-700 dark:hover:text-primary text-xl leading-none la la-search ltr:mr-4 rtl:ml-4"></button>
+                    </label>
+                </form>
+
+                <div class="flex gap-x-2">
+
+                    <!-- Sort By -->
+                    <div class="dropdown">
+                        <button class="btn btn_outlined btn_secondary uppercase" data-toggle="dropdown-menu">
+                            Sort By
+                            <span class="ltr:ml-3 rtl:mr-3 la la-caret-down text-xl leading-none"></span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#">Ascending</a>
+                            <a href="#">Descending</a>
+                        </div>
+                    </div>
+
+                    <!-- Add New -->
+                    <button class="btn btn_primary uppercase">Add New</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- List -->
+        <div class="flex flex-col gap-y-5">
+            <div class="card card_row card_hoverable">
+                <div>
+                    <div class="image">
+                        <div class="aspect-w-4 aspect-h-3">
+                            <img src="assets/images/potato.jpg">
+                        </div>
+                        <label class="custom-checkbox absolute top-0 ltr:left-0 rtl:right-0 mt-2 ltr:ml-2 rtl:mr-2">
+                            <input type="checkbox" data-toggle="cardSelection">
+                            <span></span>
+                        </label>
+                        <div
+                            class="badge badge_outlined badge_secondary uppercase absolute top-0 ltr:right-0 rtl:left-0 mt-2 ltr:mr-2 rtl:ml-2">
+                            Draft
+                        </div>
+                    </div>
+                </div>
+                <div class="header">
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+                    <p>Nunc et tincidunt tortor. Integer pellentesque bibendum neque, ultricies semper neque vulputate
+                        congue. Nunc fringilla mi sed nisi finibus vulputate. Nunc eu risus velit.</p>
+                </div>
+                <div class="body">
+                    <h6 class="uppercase">Views</h6>
+                    <p>100</p>
+                    <h6 class="uppercase mt-4 lg:mt-auto">Date Created</h6>
+                    <p>December 15, 2019</p>
+                </div>
+                <div class="actions">
+                    <div class="dropdown ltr:-ml-3 rtl:-mr-3 lg:ltr:ml-auto lg:rtl:mr-auto">
+                        <button class="btn-link" data-toggle="dropdown-menu">
+                            <span class="la la-ellipsis-v text-4xl leading-none"></span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#">Dropdown Action</a>
+                            <a href="#">Link</a>
+                            <hr>
+                            <a href="#">Something Else</a>
+                        </div>
+                    </div>
+                    <a href="#"
+                        class="btn btn-icon btn_outlined btn_secondary mt-auto ltr:ml-auto rtl:mr-auto lg:ltr:ml-0 lg:rtl:mr-0">
+                        <span class="la la-pen-fancy"></span>
+                    </a>
+                    <a href="#"
+                        class="btn btn-icon btn_outlined btn_danger lg:mt-2 ltr:ml-2 rtl:mr-2 lg:ltr:ml-0 lg:rtl:mr-0">
+                        <span class="la la-trash-alt"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="card card_row card_hoverable">
+                <div>
+                    <div class="image">
+                        <div class="aspect-w-4 aspect-h-3">
+                            <img src="assets/images/tomato.jpg">
+                        </div>
+                        <label class="custom-checkbox absolute top-0 ltr:left-0 rtl:right-0 mt-2 ltr:ml-2 rtl:mr-2">
+                            <input type="checkbox" data-toggle="cardSelection">
+                            <span></span>
+                        </label>
+                        <div
+                            class="badge badge_outlined badge_success uppercase absolute top-0 ltr:right-0 rtl:left-0 mt-2 ltr:mr-2 rtl:ml-2">
+                            Published
+                        </div>
+                    </div>
+                </div>
+                <div class="header">
+                    <h5>Donec tempor lacus quis ex ullamcorper, ut cursus dui pellentesque.</h5>
+                    <p>Nunc et tincidunt tortor. Integer pellentesque bibendum neque, ultricies semper neque vulputate
+                        congue. Nunc fringilla mi sed nisi finibus vulputate. Nunc eu risus velit.</p>
+                </div>
+                <div class="body">
+                    <h6 class="uppercase">Views</h6>
+                    <p>150</p>
+                    <h6 class="uppercase mt-4 lg:mt-auto">Date Created</h6>
+                    <p>December 10, 2019</p>
+                </div>
+                <div class="actions">
+                    <div class="dropdown ltr:-ml-3 rtl:-mr-3 lg:ltr:ml-auto lg:rtl:mr-auto">
+                        <button class="btn-link" data-toggle="dropdown-menu">
+                            <span class="la la-ellipsis-v text-4xl leading-none"></span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#">Dropdown Action</a>
+                            <a href="#">Link</a>
+                            <hr>
+                            <a href="#">Something Else</a>
+                        </div>
+                    </div>
+                    <a href="#"
+                        class="btn btn-icon btn_outlined btn_secondary mt-auto ltr:ml-auto rtl:mr-auto lg:ltr:ml-0 lg:rtl:mr-0">
+                        <span class="la la-pen-fancy"></span>
+                    </a>
+                    <a href="#"
+                        class="btn btn-icon btn_outlined btn_danger lg:mt-2 ltr:ml-2 rtl:mr-2 lg:ltr:ml-0 lg:rtl:mr-0">
+                        <span class="la la-trash-alt"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="card card_row card_hoverable">
+                <div>
+                    <div class="image">
+                        <div class="aspect-w-4 aspect-h-3">
+                            <img src="assets/images/pepper.jpg">
+                        </div>
+                        <label class="custom-checkbox absolute top-0 ltr:left-0 rtl:right-0 mt-2 ltr:ml-2 rtl:mr-2">
+                            <input type="checkbox" data-toggle="cardSelection">
+                            <span></span>
+                        </label>
+                        <div
+                            class="badge badge_outlined badge_secondary uppercase absolute top-0 ltr:right-0 rtl:left-0 mt-2 ltr:mr-2 rtl:ml-2">
+                            Draft
+                        </div>
+                    </div>
+                </div>
+                <div class="header">
+                    <h5>Quisque molestie velit sed elit finibus, nec gravida nunc finibus.</h5>
+                    <p>Nunc et tincidunt tortor. Integer pellentesque bibendum neque, ultricies semper neque vulputate
+                        congue. Nunc fringilla mi sed nisi finibus vulputate. Nunc eu risus velit.</p>
+                </div>
+                <div class="body">
+                    <h6 class="uppercase">Views</h6>
+                    <p>300</p>
+                    <h6 class="uppercase mt-4 lg:mt-auto">Date Created</h6>
+                    <p>December 5, 2019</p>
+                </div>
+                <div class="actions">
+                    <div class="dropdown ltr:-ml-3 rtl:-mr-3 lg:ltr:ml-auto lg:rtl:mr-auto">
+                        <button class="btn-link" data-toggle="dropdown-menu">
+                            <span class="la la-ellipsis-v text-4xl leading-none"></span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#">Dropdown Action</a>
+                            <a href="#">Link</a>
+                            <hr>
+                            <a href="#">Something Else</a>
+                        </div>
+                    </div>
+                    <a href="#"
+                        class="btn btn-icon btn_outlined btn_secondary mt-auto ltr:ml-auto rtl:mr-auto lg:ltr:ml-0 lg:rtl:mr-0">
+                        <span class="la la-pen-fancy"></span>
+                    </a>
+                    <a href="#"
+                        class="btn btn-icon btn_outlined btn_danger lg:mt-2 ltr:ml-2 rtl:mr-2 lg:ltr:ml-0 lg:rtl:mr-0">
+                        <span class="la la-trash-alt"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            @@include("partials/_pagination.html")
+        </div>
+
+        @@include("partials/_footer.html")
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

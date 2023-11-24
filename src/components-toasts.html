@@ -1,0 +1,62 @@
+@@include("partials/_header.html", {"title": "Toasts - Components - UI"})
+
+<body>
+
+    @@include("partials/_navigation.html")
+
+    <!-- Workspace -->
+    <main class="workspace overflow-hidden">
+
+        <!-- Breadcrumb -->
+        <section class="breadcrumb">
+            <h1>Toasts</h1>
+            <ul>
+                <li><a href="#">UI</a></li>
+                <li class="divider la la-arrow-right"></li>
+                <li><a href="#">Components</a></li>
+                <li class="divider la la-arrow-right"></li>
+                <li>Toasts</li>
+            </ul>
+        </section>
+
+        <div>
+            <button class="btn btn_primary uppercase" data-toggle="toast" data-title="Toast Title"
+                data-content="See? Just like this." data-time="just now">Show Toast</button>
+        </div>
+
+        <!-- Toasts -->
+        <div id="toasts-container"
+            class="toasts-container top-auto lg:top-0 bottom-0 lg:bottom-auto right-0 left-0 lg:ltr:left-auto lg:rtl:right-auto">
+            <div class="toast mb-4">
+                <div class="toast-header">
+                    <h5>Toast Title</h5>
+                    <small>just now</small>
+                    <button type="button" class="close" data-dismiss="toast">&times;</button>
+                </div>
+                <div class="toast-body">
+                    See? Just like this.
+                </div>
+            </div>
+            <div class="toast mb-4">
+                <div class="toast-header">
+                    <h5>Toast Title</h5>
+                    <small>2 seconds ago</small>
+                    <button type="button" class="close" data-dismiss="toast">&times;</button>
+                </div>
+                <div class="toast-body">
+                    Heads up, toast will stack automatically.
+                </div>
+            </div>
+        </div>
+
+        @@include("partials/_footer.html")
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+@@include("partials/_header.html", {"title": "Editors - Extras - UI"})
+
+<body>
+
+    @@include("partials/_navigation.html")
+
+    <!-- Workspace -->
+    <main class="workspace overflow-hidden">
+
+        <!-- Breadcrumb -->
+        <section class="breadcrumb">
+            <h1>Editors</h1>
+            <ul>
+                <li><a href="#">UI</a></li>
+                <li class="divider la la-arrow-right"></li>
+                <li><a href="#">Extras</a></li>
+                <li class="divider la la-arrow-right"></li>
+                <li>Editors</li>
+            </ul>
+        </section>
+
+        <!-- CKEditor -->
+        <div class="card p-5">
+            <h3>CKEditor</h3>
+            <div class="mt-5">
+                <textarea id="ckeditor"></textarea>
+            </div>
+        </div>
+
+        @@include("partials/_footer.html")
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/ckeditor.js"></script>
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/16.0.0/classic/ckeditor.js"></script> -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

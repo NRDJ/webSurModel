@@ -1,0 +1,21 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/assets/css/style.css": "/assets/css/style.css",
+    "/css/app.css": "/css/app.css",
+    "/assets/js/script.js": "/assets/js/script.js",
+    "/assets/js/vendor.js": "/assets/js/vendor.js",
+    "/assets/js/chart.min.js": "/assets/js/chart.min.js",
+    "/assets/js/Sortable.min.js": "/assets/js/Sortable.min.js",
+    "/assets/js/glide.min.js": "/assets/js/glide.min.js",
+    "/assets/js/ckeditor.js": "/assets/js/ckeditor.js",
+    "/assets/images/breakfast.jpg": "/assets/images/breakfast.jpg",
+    "/assets/images/check-partial.svg": "/assets/images/check-partial.svg",
+    "/assets/images/check.svg": "/assets/images/check.svg",
+    "/assets/images/garlic.jpg": "/assets/images/garlic.jpg",
+    "/assets/images/ingredients.jpg": "/assets/images/ingredients.jpg",
+    "/assets/images/onion.jpg": "/assets/images/onion.jpg",
+    "/assets/images/pepper-flower.jpg": "/assets/images/pepper-flower.jpg",
+    "/assets/images/pepper.jpg": "/assets/images/pepper.jpg",
+    "/assets/images/potato.jpg": "/assets/images/potato.jpg",
+    "/assets/images/tomato.jpg": "/assets/images/tomato.jpg"
+}
