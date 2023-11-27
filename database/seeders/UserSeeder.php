@@ -52,5 +52,14 @@ class UserSeeder extends Seeder
             'password' => Hash::make('SurModel'), // password
             'remember_token' => Str::random(10)
         ]);
+
+        User::create([
+            'name' => 'Nicolas Godoy',
+            'role_id' => '2',
+            'email' => 'nicolas.maraboli.godoy@gmail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('Unicornio123+'), // password
+            'remember_token' => Str::random(10)
+        ]);
     }
 }

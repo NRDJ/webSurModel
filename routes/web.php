@@ -25,15 +25,15 @@ Route::get('/servicios', function () {
     return view('site.services');
 })->name('services');
 
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Auth::routes();
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    if(Auth::user()->role->key == 'user'){
+    if(Auth::user()->role->key == 'user') {
         return view('dashboard.home');
     }
-    elseif (Auth::user()->role->key == 'admin'){
+    elseif (Auth::user()->role->key == 'admin') {
         return view('dashboard.admin.home');
     }
 
