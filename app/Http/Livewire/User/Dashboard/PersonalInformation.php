@@ -21,8 +21,7 @@ class PersonalInformation extends Component
     public $username, $email;
     public $rut,$name,$last_name,$gender,$birth_date,$phone,$instagram,$user_id,$country_id,$city_id;
     public $eyes_color,$hair_color,$height,$weight,$shirt_size,$pants_size,$profession,$person_id;
-    public $bank,$account_type,$account_number;      
-
+    // public $bank,$account_type,$account_number;      
     public $regions,$cities,$countries,$region_id;
 
     public function mount(User $user){
@@ -56,11 +55,11 @@ class PersonalInformation extends Component
                 $this->country_id = 39;
             }
 
-            if($person->transfer_account){
-                $this->bank = $person->transfer_account->bank;
-                $this->account_type = $person->transfer_account->account_type;
-                $this->account_number = $person->transfer_account->account_number;
-            }
+            // if($person->transfer_account){
+            //     $this->bank = $person->transfer_account->bank;
+            //     $this->account_type = $person->transfer_account->account_type;
+            //     $this->account_number = $person->transfer_account->account_number;
+            // }
 
             $this->region_id = $person->city->region_id;
             $this->cities = City::where('region_id',$person->city->region_id)->orderBy('name')->get();
@@ -108,9 +107,9 @@ class PersonalInformation extends Component
                 'weight' => 'required',
                 'shirt_size' => 'required',
                 'pants_size' => 'required',
-                'bank' => 'required',
-                'account_type' => 'required',
-                'account_number' => 'required',
+                // 'bank' => 'required',
+                // 'account_type' => 'required',
+                // 'account_number' => 'required',
                 'region_id' => 'required',
             ],
             [
@@ -133,9 +132,9 @@ class PersonalInformation extends Component
                 'weight.required'=>"el campo peso es requerido",
                 'shirt_size.required'=>"el campo talla de pantalón es requerido",
                 'pants_size.required'=>"el campo talla de polera es requerido",
-                'bank.required'=>"el campo institución bancaria es requerido",
-                'account_type.required'=>"el campo tipo de cuenta es requerido",
-                'account_number.required'=>"el campo número de cuenta es requerido",
+                // 'bank.required'=>"el campo institución bancaria es requerido",
+                // 'account_type.required'=>"el campo tipo de cuenta es requerido",
+                // 'account_number.required'=>"el campo número de cuenta es requerido",
             ]);
         }else{
             $validateData = $this->validate([
@@ -153,9 +152,9 @@ class PersonalInformation extends Component
                 'weight' => 'required',
                 'shirt_size' => 'required',
                 'pants_size' => 'required',
-                'bank' => 'required',
-                'account_type' => 'required',
-                'account_number' => 'required',
+                // 'bank' => 'required',
+                // 'account_type' => 'required',
+                // 'account_number' => 'required',
                 'region_id' => 'required',
             ],
             [
@@ -178,9 +177,9 @@ class PersonalInformation extends Component
                 'weight.required'=>"el campo peso es requerido",
                 'shirt_size.required'=>"el campo talla de pantalón es requerido",
                 'pants_size.required'=>"el campo talla de polera es requerido",
-                'bank.required'=>"el campo institución bancaria es requerido",
-                'account_type.required'=>"el campo tipo de cuenta es requerido",
-                'account_number.required'=>"el campo número de cuenta es requerido",
+                // 'bank.required'=>"el campo institución bancaria es requerido",
+                // 'account_type.required'=>"el campo tipo de cuenta es requerido",
+                // 'account_number.required'=>"el campo número de cuenta es requerido",
             ]);
         }
         
@@ -223,21 +222,21 @@ class PersonalInformation extends Component
             }
 
 
-            if($person->transfer_account){
-                $person->transfer_account->update([
-                    'bank' => $this->bank,
-                    'account_type' => $this->account_type,
-                    'account_number' => $this->account_number,
-                ]);
-            }
-            else{
-                TransferAccount::create([
-                    'bank' => $this->bank,
-                    'account_type' => $this->account_type,
-                    'account_number' => $this->account_number,
-                    'person_id'=> $person->id,
-                ]);
-            }
+            // if($person->transfer_account){
+            //     $person->transfer_account->update([
+            //         'bank' => $this->bank,
+            //         'account_type' => $this->account_type,
+            //         'account_number' => $this->account_number,
+            //     ]);
+            // }
+            // else{
+            //     TransferAccount::create([
+            //         'bank' => $this->bank,
+            //         'account_type' => $this->account_type,
+            //         'account_number' => $this->account_number,
+            //         'person_id'=> $person->id,
+            //     ]);
+            // }
 
         }else{
             Person::create([
@@ -265,12 +264,12 @@ class PersonalInformation extends Component
                 'person_id'=> $person->id,
             ]);
 
-            TransferAccount::create([
-                'bank' => $this->bank,
-                'account_type' => $this->account_type,
-                'account_number' => $this->account_number,
-                'person_id'=> $person->id,
-            ]);
+            // TransferAccount::create([
+            //     'bank' => $this->bank,
+            //     'account_type' => $this->account_type,
+            //     'account_number' => $this->account_number,
+            //     'person_id'=> $person->id,
+            // ]);
         }
 
         $this->alert('success', 'Datos Actualizados!', [

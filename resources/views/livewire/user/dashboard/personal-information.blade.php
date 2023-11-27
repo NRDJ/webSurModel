@@ -203,7 +203,7 @@
                     <small class="block mt-2 invalid-feedback">{{ $message }}</small>
                     @enderror
                 </div>
-                <div class="card p-5">
+                <!-- <div class="card p-5">
                     <h3>Datos Bancarios</h3>
                     <div class="input-group mt-5">
                         <div class="input-addon input-addon-prepend input-group-item" >Entidad Bancaria</div>
@@ -235,7 +235,7 @@
                     @error('account_number') 
                     <small class="block mt-2 invalid-feedback">{{ $message }}</small>
                     @enderror
-                </div>
+                </div> -->
             </div>
 
             <div class="flex flex-col gap-y-5 lg:col-span-1">
